@@ -1,0 +1,72 @@
+
+.body_home{
+    padding-top: 5rem;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.800);
+
+}
+nav .nav-wrapper{
+    height: 6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+nav .nav-wrapper >div{
+    display: flex;
+    height: 90%;
+    padding-left: 5rem;
+    align-items: center;
+}
+nav .nav-wrapper >div >a{
+    display: flex;
+    height: 70%;
+    padding: 0.5rem;
+    align-items: center;
+}
+
+nav .nav-wrapper >div >a:hover{
+    box-shadow: 1px 1px 7px 3px white;
+}
+.cont-home{
+    display: flex;
+    flex-direction: column;
+    gap: 10rem;
+    width: 60%;
+    align-items: center;
+}
+.marvel-home>hr{
+    width: 100%;
+    color: red;
+    background-color: red;
+}
+.marvel-home{
+    border-radius: 1rem;
+    color: red;
+    width: 80%;
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 100);
+}
+.marvel-img-home{
+    width: 100%;
+    height: max-content;
+    border-radius: 1rem;
+}
+
+.marvel-img-home >a{
+    width: 100%;
+    border-radius: 1rem;
+}
+.marvel-img-home:hover{
+    box-shadow: 1px 1px 5px 5px maroon;
+}
+.marvel-img-home >a>img{
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+}
