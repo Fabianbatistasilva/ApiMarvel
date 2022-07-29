@@ -2,25 +2,20 @@
 {% block section %}
 <div class="body_home">
     <div class="cont-home">
-        {% for lista in marvel %}
-        <div class="marvel-home">
-            <h3>{{lista.title}}</h3>
-            <div class="marvel-img-home">
-                <a href="{{lista.id}}"><img src="{{lista.thumbnail.path}}.{{lista.thumbnail.extension}}" alt=""></a>
+        {% for serie in marvel %}
+        <div>
+            <H1>{{serie.title}}</H1>
+            <label for="">{{serie}}</label>
+            <div>
+                <img src="{{serie.thumbnail.path}}.{{serie.thumbnail.extension}}" alt="">
             </div>
-            <br>
-            {% for img in lista.urls %}
-            
-            {% if img.url %}
-            <br>
-            <a href="{{img.url}}">Link Imagem</a>
-            <hr>
+            {% if serie.description %}
+                <p>{{serie.description}}</p>
             {% endif %}
-            {% endfor %}
-            {% if img.description %}
-            <label for="">{{lista.description}}</label>
-            <br>
-            {% endif %}
+            <label for="">Inicio:{{serie.startYear}} </label>
+            <label for="">Final: {{serie.endYear}}</label>
+            <label for="">Nota: {{serie.stories.available}}</label>
+            <label for="">criadores nota: {{serie.creators.available}}</label>
         </div>
         {% endfor %}
     </div>

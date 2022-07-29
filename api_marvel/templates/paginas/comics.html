@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block section %}
+<div class="body_comics">
+    <div class="cont-comics">
+        {% for lista in marvel %}
+        <div class="marvel-comics">
+            <h3>{{lista.title}}</h3>
+            <div class="marvel-img-comics">
+                <a href="{% url 'comicsEspecifico' lista.id %}"><img src="{{lista.thumbnail.path}}.{{lista.thumbnail.extension}}" alt=""></a>
+            </div>
+            <br>
+            {% for img in lista.urls %}
+            
+            {% if img.url %}
+            <br>
+            <a href="{{img.url}}">Link Imagem</a>
+            <hr>
+            {% endif %}
+            {% endfor %}
+            {% if img.description %}
+            <label for="">{{lista.description}}</label>
+            <br>
+            {% endif %}
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

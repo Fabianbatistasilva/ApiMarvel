@@ -1,0 +1,30 @@
+.body_comics{
+    padding-top: 5rem;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.800);
+}
+.cont_comics{
+    color: aliceblue;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    background-color: brown;
+    border-radius: 1rem;
+    border: 1px whitesmoke solid;
+}
+.cont_comics > .div-img-comics > img{
+    border-radius: 1rem;
+}
+.cont_comics > label{
+    font-size: 1rem;
+    color: black;
+    background-color: aliceblue;
+    padding: 1rem;
+    border-radius: 1rem;
+}

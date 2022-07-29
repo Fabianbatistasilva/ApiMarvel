@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block section %}
+<div class="body_comics">
+    <div class="cont_comics">
+        {% for comics in marvel %}
+        <h1 for="">{{comics.title}}</h1>
+        <div class="div-img-comics">
+            <img src="{{comics.thumbnail.path}}.{{comics.thumbnail.extension}}" alt="">
+        </div>
+        <br>
+        {% if comics.description %}
+            <p>{{ comics.description} }</p>
+        {% endif %}
+        <label for="">Nota de avaliação: {{ comics.stories.available}}</label>
+    
+        {% endfor %}
+    
+    </div>
+</div>
+    
+{% endblock %}

@@ -1,0 +1,50 @@
+
+.body_comics{
+    padding-top: 5rem;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.800);
+
+}
+
+.cont-comics{
+    display: flex;
+    flex-direction: column;
+    gap: 10rem;
+    width: 60%;
+    align-items: center;
+}
+.marvel-comics>hr{
+    width: 100%;
+    color: red;
+    background-color: red;
+}
+.marvel-comics{
+    border-radius: 1rem;
+    color: red;
+    width: 80%;
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 100);
+}
+.marvel-img-comics{
+    width: 100%;
+    height: max-content;
+    border-radius: 1rem;
+}
+
+.marvel-img-comics >a{
+    width: 100%;
+    border-radius: 1rem;
+}
+.marvel-img-comics:hover{
+    box-shadow: 1px 1px 5px 5px maroon;
+}
+.marvel-img-comics >a>img{
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+}
