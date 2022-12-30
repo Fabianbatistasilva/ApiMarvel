@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="{% static 'css/comics.css' %}">
     <link rel="stylesheet" href="{% static 'css/comicsEspecifico.css' %}">
     <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    <link rel="stylesheet" href="{% static 'css/serie.css' %}">
     <title>Document</title>
     <style>
         body{
@@ -21,13 +22,13 @@
 <body>
     <header>
         <nav>
-            <div class="nav-wrapper black">
+            <div id="nav-bar-base" class="nav-wrapper black">
                 <div>
                     <a href="{% url 'home' %}"><img src="https://img.icons8.com/color/96/000000/marvel.png"/></a>
                 </div>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li><a href="sass.html">Sass</a></li>
-                    <li><a href="badges.html">Components</a></li>
+                    <li><a href="{% url 'serie' %}">Série</a></li>
+                    <li><a href="{% url 'comics' %}">Comics</a></li>
                     <li><a href="collapsible.html">JavaScript</a></li>
                 </ul>
             </div>

@@ -3,19 +3,22 @@
 <div class="body_home">
     <div class="cont-home">
         {% for serie in marvel %}
-        <div>
-            <H1>{{serie.title}}</H1>
-            <label for="">{{serie}}</label>
-            <div>
+        <div class="div-home">
+            <div class="title-home">
+                <h5>{{serie.title}}</h5>
+            </div>
+            <div class="img-home">
                 <img src="{{serie.thumbnail.path}}.{{serie.thumbnail.extension}}" alt="">
             </div>
             {% if serie.description %}
                 <p>{{serie.description}}</p>
             {% endif %}
-            <label for="">Inicio:{{serie.startYear}} </label>
-            <label for="">Final: {{serie.endYear}}</label>
-            <label for="">Nota: {{serie.stories.available}}</label>
-            <label for="">criadores nota: {{serie.creators.available}}</label>
+            <div class="info-home">
+                <label for="">Inicio:{{serie.startYear}} </label>
+                <label for="">Final: {{serie.endYear}}</label>
+                <label for="">Nota: {{serie.stories.available}}</label>
+                <label for="">criadores nota: {{serie.creators.available}}</label>
+            </div>
         </div>
         {% endfor %}
     </div>

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block section %}
+<div class="body_serie">
+    <div class="conteudo_serie">
+        {% for serie in marvel %}
+        <div class="cont_serie">
+            <h6>{{serie.title}}</h6>
+            <div>
+                <img src="{{serie.}}" alt="">
+            </div>
+            <label for="">{{serie}}</label>
+            <br>
+        </div>
+        {%endfor%}
+    </div>
+</div>
+{% endblock %}
