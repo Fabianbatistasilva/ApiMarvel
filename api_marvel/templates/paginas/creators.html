@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% block section %}
+<div class="Body-creators">
+    <div class="Sections-creators">
+    {% for serie in marvel %}
+        <div class="Main-creators">
+            <a class="Link-creators" href="{% url 'creatorSpecific' serie.id %}">
+                <div class="title-creators">
+                    <h4>{{serie.fullName}}</h4>
+                </div>
+                {% if serie.thumbnail.path != 'http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available'  %}
+                <div class="img-creators">
+                    <img src="{{serie.thumbnail.path}}.{{serie.thumbnail.extension}}" alt="">
+                </div>
+                {% endif %}
+                
+                <div class="Series-creators">
+                    {% if serie.comics or serie.series or serie.stories or serie.events  %}
+                        {% if serie.comics %}
+                            {% for Item  in serie.comics.items %}
+                            <a href="{{Item.resourceURI}}?ts=1&apikey=998d4fbbf454824314ac967bb64d0158&hash=9c95b9717bfea2eaa49400e14535256c" alt=""><p>{{Item.name}}</p></a>
+                            {% endfor %} 
+                        {% endif %}
+                        {% if serie.series %}
+                            {% for Item  in serie.series.items %}
+                            <a href="{{Item.resourceURI}}?ts=1&apikey=998d4fbbf454824314ac967bb64d0158&hash=9c95b9717bfea2eaa49400e14535256c" alt=""><p>{{Item.name}}</p></a>
+                            {% endfor %} 
+                        {% endif %}
+                        {% if serie.stories %}
+                            {% for Item  in serie.stories.items %}
+                            <a href="{{Item.resourceURI}}?ts=1&apikey=998d4fbbf454824314ac967bb64d0158&hash=9c95b9717bfea2eaa49400e14535256c" alt=""><p>{{Item.name}}</p></a>
+                            {% endfor %} 
+                        {% endif %}
+                        {% if serie.events %}
+                            {% for Item  in serie.events.items %}
+                            <a href="{{Item.resourceURI}}?ts=1&apikey=998d4fbbf454824314ac967bb64d0158&hash=9c95b9717bfea2eaa49400e14535256c" alt=""><p>{{Item.name}}</p></a>
+                            {% endfor %}
+                        {% endif %}
+                    {%else%}
+                        <h6>Não possue documentos</h6>
+                    {% endif %}
+                </div>
+            </a>
+        </div>
+    {% endfor %}
+    </div>
+</div>
+{% endblock %}

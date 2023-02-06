@@ -15,6 +15,11 @@ def comics(request):
     context={'marvel':marvel}
     return render(request,'paginas/comics.html',context)
 
+def Creators(request):
+    marvel=requests.get('https://gateway.marvel.com/v1/public/creators?ts=1&apikey=998d4fbbf454824314ac967bb64d0158&hash=9c95b9717bfea2eaa49400e14535256c').json()
+    marvel=marvel['data']['results']
+    context={'marvel':marvel}
+    return render(request,'paginas/creators.html',context)
 
 def Serie(request):
     marvel=requests.get('https://gateway.marvel.com/v1/public/series?ts=1&apikey=998d4fbbf454824314ac967bb64d0158&hash=9c95b9717bfea2eaa49400e14535256c').json()
@@ -27,3 +32,8 @@ def comicsEspec(request,id):
     marvel=marvel['data']['results']
     context={'marvel':marvel}
     return render(request,'paginas/comicsEspecifico.html',context)
+def creatorSpecific(request,id):
+    marvel=requests.get(f'https://gateway.marvel.com:443/v1/public/creators/{id}?ts=1&apikey=998d4fbbf454824314ac967bb64d0158&hash=9c95b9717bfea2eaa49400e14535256c').json()
+    marvel=marvel['data']['results']
+    context={'marvel':marvel}
+    return render(request,'paginas/creatorEspecifico.html',context)

@@ -12,12 +12,14 @@
     <link rel="stylesheet" href="{% static 'css/comicsEspecifico.css' %}">
     <link rel="stylesheet" href="{% static 'css/home.css' %}">
     <link rel="stylesheet" href="{% static 'css/serie.css' %}">
+    <link rel="stylesheet" href="{% static 'css/creators.css' %}">
     <title>Document</title>
     <style>
         body{
             margin: 0px;
         }
     </style>
+        
 </head>
 <body>
     <header>
@@ -29,7 +31,7 @@
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
                     <li><a href="{% url 'serie' %}">Série</a></li>
                     <li><a href="{% url 'comics' %}">Comics</a></li>
-                    <li><a href="collapsible.html">JavaScript</a></li>
+                    <li><a href="{% url 'Creators' %}">Criadores</a></li>
                 </ul>
             </div>
         </nav>

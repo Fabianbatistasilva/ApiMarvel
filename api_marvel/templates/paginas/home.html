@@ -11,13 +11,13 @@
                 <img src="{{serie.thumbnail.path}}.{{serie.thumbnail.extension}}" alt="">
             </div>
             {% if serie.description %}
-                <p>{{serie.description}}</p>
+                <p>{{serie.description|truncatewords:40 }}</p>
             {% endif %}
             <div class="info-home">
                 <label for="">Inicio:{{serie.startYear}} </label>
                 <label for="">Final: {{serie.endYear}}</label>
                 <label for="">Nota: {{serie.stories.available}}</label>
-                <label for="">criadores nota: {{serie.creators.available}}</label>
+                <label for="">Criadores nota: {{serie.creators.available}}</label>
             </div>
         </div>
         {% endfor %}

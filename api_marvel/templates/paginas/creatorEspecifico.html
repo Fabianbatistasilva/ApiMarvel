@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block section %}
+<div class="body_comics">
+    <div class="cont_comics">
+        {% for creators in marvel %}
+        <h6 for="">{{creators}}</h6>
+        <div class="div-img-creators">
+            <img src="{{creators.thumbnail.path}}.{{creators.thumbnail.extension}}" alt="">
+        </div>
+        <br>
+        {% if creators.description %}
+            <p>{{ creators.description} }</p>
+        {% endif %}
+        <label for="">Nota de avaliação: {{ creators.stories.available}}</label>
+    
+        {% endfor %}
+    
+    </div>
+</div>
+    
+{% endblock %}
